@@ -1,0 +1,57 @@
+@echo off
+echo "TrueCrypt Mounter Version 1.0"
+echo.
+echo "Willkommen beim TC-Mounter"
+echo.
+echo.
+echo.
+echo "Laufwerk: !Laufwerkname! wird eingebunden..."
+pause
+"C:\Programme\TrueCrypt\TrueCrypt.exe" D:\Laufwerkname /l F: /k C:\Keyfile1 /p test123 /a /q"
+echo "...eingebunden..."
+echo.
+echo.
+echo.
+echo "Laufwerk: !Laufwerkname! wird eingebunden..."
+pause
+"C:\Programme\TrueCrypt\TrueCrypt.exe" D:\Laufwerkname /l G: /k C:\Keyfile1 /k C:\Keyfile2 /p test123 /a /q"
+echo "...eingebunden..."
+echo.
+echo.
+echo.
+echo "Laufwerk: !Laufwerkname! wird eingebunden..."
+pause
+"C:\Programme\TrueCrypt\TrueCrypt.exe" D:\Laufwerkname /l H: /k C:\Keyfile1 /p test123 /a /q"
+echo "...eingebunden..."
+echo.
+echo.
+echo "Alle Volumes erfolgreich eingebunden!"
+pause
+exit
+
+REM Info Kommandozeile/Parameter:
+REM	Part 1: Speicherort von TrueCrypt.
+REM Part 2: Speicherort von VirtuellenLaufwerk (D:TrueCryptVolume1)
+REM Part 3: /l Angabe des Laufwerksbuchstabens (/l F:)
+REM Part 4: /k Speicherort des/der Keyfile(s) (/k C:\Keyfile1 /k C:\Keyfile2)
+REM Part 5: /p Angabe des Passwortes im Klartext (/p test123) !!! ACHTUNG mit SONDERZEICHEN in der BATCH-SPRACHE !!!
+REM Part 6: /a TrueCrypts Automount-funktion
+REM Part 7: /q TrueCrypts Exit Funktion - TrueCrypt GUI wird nicht sichtbar beim Mounten
+REM TrueCrypt COMMANDS:
+REM /a 		/auto
+REM	/b 		/beep
+REM /c 		/cache
+REM /d 		/dismount
+REM /e 		/explore
+REM /f 		/force
+REM /? 		/help
+REM /h 		/history
+REM /k 		/keyfile
+REM /l 		/letter
+REM /m 		/mountoption
+REM /p 		/password
+REM /q 		/quit
+REM /s 		/silent
+REM  		  /tokenlib
+REM /v 		/volume
+REM /w 		/wipecache
